@@ -1,0 +1,55 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: dev
+  main:
+    allow-circular-references: true
+  datasource:
+    druid:
+      driver-class-name: ${delivery.datasource.driver-class-name}
+      url: jdbc:mysql://${delivery.datasource.host}:${delivery.datasource.port}/${delivery.datasource.database}?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: ${delivery.datasource.username}
+      password: ${delivery.datasource.password}
+  redis:
+    host: ${delivery.redis.host}
+    port: ${delivery.redis.port}
+    password: ${delivery.redis.password}
+    database: ${delivery.redis.database}
+
+mybatis:
+  #mapper配置文件
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.delivery.entity
+  configuration:
+    #开启驼峰命名
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com:
+      delivery:
+        mapper: debug
+        service: info
+        controller: info
+
+delivery:
+  jwt:
+    # 设置jwt签名加密时使用的秘钥
+    admin-secret-key: itcast
+    # 设置jwt过期时间
+    admin-ttl: 7200000
+    # 设置前端传递过来的令牌名称
+    admin-token-name: token
+    user-secret-key: itheima
+    user-ttl: 7200000
+    user-token-name: authentication
+  alioss:
+    endpoint: ${delivery.alioss.endpoint}
+    access-key-id: ${delivery.alioss.access-key-id}
+    access-key-secret: ${delivery.alioss.access-key-secret}
+    bucket-name: ${delivery.alioss.bucket-name}
+  wechat:
+    appid: ${delivery.wechat.appid}
+    secret: ${delivery.wechat.secret}

@@ -1,0 +1,21 @@
+delivery:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    host: localhost
+    port: 2453
+    database: delivery
+    username: root
+    password: 324Wangsiyi@
+  alioss:
+    endpoint: oss-cn-beijing.aliyuncs.com
+    access-key-id: LTAI5tLXFvviwFwadM93gSxz
+    access-key-secret: bJAp2kYwALSPCEySFEPM2m5OLTacld
+    bucket-name: w0sy
+  redis:
+    host: localhost
+    port: 6379
+    password: 324Wangsiyi@
+    database: 0
+  wechat:
+    appid: wxd47bcf4d498a06bc
+    secret: e71961066935f2ad3e23d99d44b181c6
