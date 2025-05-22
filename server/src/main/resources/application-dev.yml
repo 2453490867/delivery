@@ -19,3 +19,14 @@ delivery:
   wechat:
     appid: wxd47bcf4d498a06bc
     secret: e71961066935f2ad3e23d99d44b181c6
+    mchid:
+    mchSerialNo:
+    privateKeyFilePath:
+    apiV3Key:
+    weChatPayCertFilePath:
+    notifyUrl: https://3960fbda.r19.vip.cpolar.cn/notify/paySuccess
+    refundNotifyUrl: https://3960fbda.r19.vip.cpolar.cn/notify/refundSuccess
+  shop:
+    address: 北京市海淀区上地十街10号
+  baidu:
+    ak: 5wXgJXTYgH5DqI9iMQ6O5xwbh9GZwKEa

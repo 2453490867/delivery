@@ -53,3 +53,14 @@ delivery:
   wechat:
     appid: ${delivery.wechat.appid}
     secret: ${delivery.wechat.secret}
+    mchid: ${delivery.wechat.mchid}
+    mchSerialNo: ${delivery.wechat.machSerialNo}
+    privateKeyFilePath: ${delivery.wechat.privateKeyFilePath}
+    apiV3Key: ${delivery.wechat.apiV3Key}
+    weChatPayCertFilePath: ${delivery.wechat.weChatPayCertFilePath}
+    notifyUrl: ${delivery.wechat.notifyUrl}
+    refundNotifyUrl: ${delivery.wechat.refundNotifyUrl}
+  shop:
+    address: ${delivery.shop.address}
+  baidu:
+    ak: ${delivery.shop.baidu}
